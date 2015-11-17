@@ -1,0 +1,19 @@
+
+
+
+<form name="calculator" id="calculatorForm" action="/<Computed Value>/agtCalculator?Open" method="GET">
+
+    <div id="calculator">
+    <h1>Kalkylator</h1>
+    <label for="FinancedAmount">Finansierat belopp [$[Currency]]:</label><input type="text" name="FinancedAmount" class="num half required" value="<Computed Value>" onblur="checkNum(this);">
+    <br><label for="ResidualValue">Anvisningsvärde [$[CustCurrency]]:</label><input type="text" name="ResidualValue" class="num half required" value="<Computed Value>" onblur="checkNum(this);">
+    <br><label for="PaymentInAdvance" class="select">Faktureras i:</label>
+    <br><label for="IBType" class="select">Räntebas:</label>
+    <br><label for="PeriodLength" class="select">Periodlängd:</label>
+    <br><label for="Duration" class="select">Avtalstid [månader]</label>
+    <br><label for="PeriodFee">Hyra (exkl. service / tjänster) [$[CustCurrency]]:</label><input type="text" name="PeriodFee" class="num half required" value="<Computed Value>" onblur="checkNum(this);">
+    <div class="buttons">
+
+    </div>
+</div>
+</form>

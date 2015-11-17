@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>Kalkylator</title>
+        <link rel="stylesheet" href="style.less">
+        <meta charset="utf-8">
+        <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+        <style>
+        .modal {
+        background-image:none;
+        }
+
+        </style>
+        
+        <script> 
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideToggle("slow");
+            });
+        });
+        </script>
+
+    </head>
+    <body>
+        <section>
+            <div class="modal draggable" draggable="true">
+                  <header class="triangle-border">
+                <figure class="close"></figure>
+                </header>
+                <div id="content">
+                    <h1>Kalkylator</h1>
+                    <form>
+                        <label>Finanserat belopp [SEK]:<br>
+                            <input type="text" class="inline sixty num half required" name="FinancedAmount" value="<Computed Value>" onblur="checkNum(this);" />
+                            <button type="button" class="inline fourty" value="">Sök</button>
+                        </label>
+                        <label>Anvisningsvärde [SEK]:<br>
+                            <input type="text" class="inline sixty num half required" name="ResidualValue" value="<Computed Value>" onblur="checkNum(this);" />
+                            <button type="button" class="inline fourty" value="">Sök</button>
+                        </label>
+                        <label>Faktureras i:
+                           <select type="select" disabled>
+                                <option>#1</option>
+                           </select>
+                        </label> 
+                        <label>Räntebas:
+                            <select type="select" class="">
+                                <option>#1</option>
+                                <option>#2</option>
+                                <option>#3</option>
+                                <option>#4</option>
+                                <option>#5</option>
+                                <option>#6</option>
+                            </select>
+                        </label>
+                        <label>Periodlängd:
+                            <select type="select" class="">
+                                <option>#1</option>
+                                <option>#2</option>
+                            </select>
+                        </label>
+                        <label>Avtalstid:
+                            <select type="select" class="">
+                                <option>#1</option>
+                                <option>#2</option>
+                            </select>
+                        </label>
+                        <label>Hyra (exkl. service / tjänster) [SEK]:<br>
+                            <input type="text" class="inline sixty num half required" name="PeriodFee" value="<Computed Value>" onblur="checkNum(this);"/>
+                            <button type="button" class="inline fourty">Sök</button>
+                        </label>
+                    </form>
+                </div>
+               <div id="flip">Översättning</div>
+                <div id="panel">  
+                    <button class="translate" href="#">SV</button> <button class="translate" href="#">EN</button> <button class="translate" href="#">FI</button> <label class="inline">[sv]</label>
+                    <br> <button href="#">Visa oöversatta</button> <button href="#">Översätt</button>
+                </div>
+                 <section class="black"></section>
+              
+            </div>
+        </section>
+         
+    </body>
+</html>
